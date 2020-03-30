@@ -11,7 +11,7 @@ int main() {
 
 void UVa10141(){
 
-    int n, p;
+    float n, p;
 
     string line;
     string proposal;
@@ -24,7 +24,7 @@ void UVa10141(){
 
         cin>>n>>p;
 
-        if (n==0 or p==0)
+        if (n==0 and p==0)
             break;
 
         float maxCompliance = 0;
@@ -60,40 +60,10 @@ void UVa10141(){
             }
         }
 
-        cout<<"RFP #"<<++count<<endl<<proposalMaxCompliance<<endl;
+        count++;
+        if (count>1) cout<<endl;
+        cout<<"RFP #"<<count<<endl<<proposalMaxCompliance<<endl;
     }
 }
 
-/*6 4
-engine
-        brakes
-tires
-        ashtray
-vinyl roof
-trip computer
-Chevrolet
-20000.00 3
-engine
-        tires
-brakes
-        Cadillac
-70000.00 4
-ashtray
-        vinyl roof
-        trip computer
-        engine
-Hyundai
-10000.00 3
-engine
-        tires
-ashtray
-        Lada
-6000.00 1
-tires
-1 1
-coffee
-        Starbucks
-1.50 1
-coffee
-0 0*/
 
